@@ -11,6 +11,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { PostsComponent } from './posts/posts.component';
+import { DeletePostComponent } from './delete-post/delete-post.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PostsComponent } from './posts/posts.component';
     DashboardComponent,
     FooterComponent,
     PostsComponent,
+    DeletePostComponent,
     
   ],
   imports: [
@@ -30,7 +32,7 @@ import { PostsComponent } from './posts/posts.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents: [ SignInComponent, SignUpComponent],
+  entryComponents: [ SignInComponent, SignUpComponent, DeletePostComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
