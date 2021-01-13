@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeletePostComponent } from '../delete-post/delete-post.component';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { PostsComponent } from '../posts/posts.component';
 
 
 @Component({
@@ -17,7 +18,9 @@ export class DashboardComponent implements OnInit {
   openModal() {
     this.modalRef = this.modalService.show(DeletePostComponent)
   }
- 
+  modal() {
+    this.modalRef = this.modalService.show(PostsComponent)
+  }
   ngOnInit() {
   }
  

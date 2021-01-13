@@ -32,7 +32,7 @@ import { DeletePostComponent } from './delete-post/delete-post.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents: [ SignInComponent, SignUpComponent, DeletePostComponent],
+  entryComponents: [ SignInComponent, SignUpComponent, DeletePostComponent, PostsComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
