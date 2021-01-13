@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  // onOpen(event: any) {
+  //   console.log(event);
+  // }
   constructor() { }
 //view: any;
   ngOnInit() {
