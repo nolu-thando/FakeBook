@@ -13,13 +13,12 @@ export class AppComponent {
 
   constructor(private modalService: MDBModalService) { }
 
-  basicModal() {
-    this.modalRef = this.modalService.show(SignInComponent)
-  }
   openBasic() {
     this.modalRef = this.modalService.show(SignUpComponent)
   }
-
+Modal(){
+  this.modalRef = this.modalService.show(SignInComponent)
+}
 
 
 }

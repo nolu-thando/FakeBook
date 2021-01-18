@@ -14,14 +14,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private modalService: MDBModalService) { }
 
-  basicModal() {
-    this.modalRef = this.modalService.show(SignInComponent)
-  }
   openBasic() {
     this.modalRef = this.modalService.show(SignUpComponent)
   }
-
-
   ngOnInit() {
   }
 

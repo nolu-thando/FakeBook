@@ -1,31 +1,47 @@
-<div class="modal-header">
-    <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-        <span aria-hidden="true">×</span>
-      </button>
-  <h4 class="modal-title w-100 text-muted" id="myModalLabel">Sign In</h4>
-</div>
-<div class="modal-body">
-  <div class="md-form">
-      <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-      <input mdbInput type="text" name="email" class="form-control">
-      <label for="form1" class="">Email</label>
-  </div>
 
-<div class="md-form">
-  <i class="fas fa-lock prefix grey-text"></i>
-  <input mdbInput type="password" name="password"  class="form-control">
-  <label for="form1" class="">Password</label>
-</div>
-</div>
-<div class="modal-footer">
-
-  <!--Footer-->
-  <div class="modal-footer">
-      <div class="options text-center text-md-right mt-1">
-          <p>Not a member? <a href class="blue-text">Sign Up</a></p>
-      </div>
- 
-  <div class="modal-footer">
-      <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Sign In</button>
-  </div>
-</div>
+   
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+              <input type="email" id="defaultForm-email" [formControl]="loginFormModalEmail" class="form-control"
+                     mdbInput mdbValidate>
+              <label for="defaultForm-email">Your email</label>
+              <mdb-error
+                *ngIf="loginFormModalEmail.invalid && (loginFormModalEmail.dirty || loginFormModalEmail.touched)">
+                Input invalid
+              </mdb-error>
+              <mdb-success
+                *ngIf="loginFormModalEmail.valid && (loginFormModalEmail.dirty || loginFormModalEmail.touched)">Input
+                valid
+              </mdb-success>
+            </div>
+    
+            <div class="md-form mb-4">
+              <mdb-icon fas icon="lock" class="prefix grey-text"></mdb-icon>
+              <input type="password" id="defaultForm-pass" [formControl]="loginFormModalPassword" class="form-control"
+                     mdbInput mdbValidate>
+              <label for="defaultForm-pass">Your password</label>
+              <mdb-error
+                *ngIf="loginFormModalPassword.invalid && (loginFormModalPassword.dirty || loginFormModalPassword.touched)">
+                Input invalid
+              </mdb-error>
+              <mdb-success
+                *ngIf="loginFormModalPassword.valid && (loginFormModalPassword.dirty || loginFormModalPassword.touched)">
+                Input valid
+              </mdb-success>
+            </div>
+    
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button mdbBtn mdbBtn color="primary" mdbWavesEffect class="waves-light" >Sign In</button>
+          </div>
+        </div>
+  
