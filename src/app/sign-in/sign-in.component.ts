@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MDBModalRef } from 'angular-bootstrap-md';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { UserServiceService } from '../user-service.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  modalRef: MDBModalRef;
 
   
   // user: any;
@@ -20,10 +22,11 @@ export class SignInComponent implements OnInit {
   password: string;
   validatingForm: any;
   sign_in:String;
+
   
 
 
-  constructor(public modalRef: MDBModalRef,public service: UserServiceService,
+  constructor(private modalService: MDBModalService,
   public route: Router ) { }
 
   ngOnInit() {
@@ -33,6 +36,9 @@ export class SignInComponent implements OnInit {
       loginFormModalPassword: new FormControl('', Validators.required)
     });
  
+  }
+  openBasic() {
+    this.modalRef = this.modalService.show(SignUpComponent)
   }
 
   get loginFormModalEmail() {
@@ -53,6 +59,7 @@ export class SignInComponent implements OnInit {
     this.sign_in='';
       this.route.navigate(['dashboard']);
       }
+    
     }
 
   }
