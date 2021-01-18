@@ -1,21 +1,31 @@
+<div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+        <span aria-hidden="true">×</span>
+      </button>
+  <h4 class="modal-title w-100 text-muted" id="myModalLabel">Sign In</h4>
+</div>
+<div class="modal-body">
+  <div class="md-form">
+      <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+      <input mdbInput type="text" name="email" class="form-control">
+      <label for="form1" class="">Email</label>
+  </div>
 
+<div class="md-form">
+  <i class="fas fa-lock prefix grey-text"></i>
+  <input mdbInput type="password" name="password"  class="form-control">
+  <label for="form1" class="">Password</label>
+</div>
+</div>
+<div class="modal-footer">
 
-<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+  <!--Footer-->
+  <div class="modal-footer">
+      <div class="options text-center text-md-right mt-1">
+          <p>Not a member? <a href class="blue-text">Sign Up</a></p>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
-        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
-      </div>
-    </div>
+ 
+  <div class="modal-footer">
+      <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Sign In</button>
   </div>
 </div>
